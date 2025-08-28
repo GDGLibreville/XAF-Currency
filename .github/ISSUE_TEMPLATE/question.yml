@@ -1,0 +1,160 @@
+name: ❓ Question / Support
+description: Poser une question ou demander de l'aide
+title: "[QUESTION] "
+labels: ["question", "help-wanted"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Besoin d'aide avec XAF Currency ? Nous sommes là pour vous aider ! 💪
+        
+        **Avant de poser votre question :**
+        - [ ] J'ai consulté la [documentation](https://github.com/gdg-libreville/xaf-currency#readme)
+        - [ ] J'ai cherché dans les issues existantes
+        - [ ] J'ai consulté le [guide de contribution](https://github.com/gdg-libreville/xaf-currency/blob/main/CONTRIBUTING.md)
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: 🏷️ Type de question
+      description: Quelle est la nature de votre question ?
+      options:
+        - "💻 Utilisation de la librairie"
+        - "⚙️ Configuration et installation"
+        - "🐛 Comportement inattendu (pas sûr que ce soit un bug)"
+        - "🚀 Meilleures pratiques"
+        - "🔧 Intégration avec d'autres outils"
+        - "📚 Documentation manquante ou peu claire"
+        - "🎯 Cas d'usage spécifique"
+        - "🤝 Contribution au projet"
+        - "Autre"
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: ❓ Votre question
+      description: Posez votre question de manière claire et détaillée
+      placeholder: |
+        J'aimerais savoir comment...
+        
+        Je n'arrive pas à comprendre pourquoi...
+        
+        Est-ce que XAF Currency peut...
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 🎯 Contexte
+      description: Dans quel contexte utilisez-vous XAF Currency ?
+      placeholder: |
+        - Type d'application : (web, mobile, desktop...)
+        - Framework : (React, Vue, Angular, Node.js...)
+        - Cas d'usage : (e-commerce, comptabilité, dashboard...)
+
+  - type: textarea
+    id: code
+    attributes:
+      label: 💻 Code actuel
+      description: Partagez le code que vous essayez d'utiliser (si applicable)
+      render: typescript
+      placeholder: |
+        import { XAFCurrency } from 'xaf-currency';
+        
+        // Votre code ici
+        const result = XAFCurrency.format(150000);
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: 🔄 Ce que vous avez déjà essayé
+      description: Qu'avez-vous tenté pour résoudre votre problème ?
+      placeholder: |
+        J'ai essayé :
+        - Méthode A : résultat...
+        - Méthode B : erreur...
+        - Recherche sur Google : trouvé X mais...
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 🎯 Résultat souhaité
+      description: Quel résultat aimeriez-vous obtenir ?
+      placeholder: "J'aimerais que le résultat soit..."
+
+  - type: input
+    id: version
+    attributes:
+      label: 📦 Version XAF Currency
+      description: Quelle version utilisez-vous ?
+      placeholder: "1.0.0"
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: 🌍 Environnement
+      description: Dans quel environnement travaillez-vous ?
+      multiple: true
+      options:
+        - "Node.js"
+        - "Browser"
+        - "React"
+        - "Vue.js"
+        - "Angular"
+        - "Next.js"
+        - "Nuxt.js"
+        - "TypeScript"
+        - "JavaScript"
+        - "Autre"
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: ⏰ Urgence
+      description: À quel point cette question est-elle urgente pour vous ?
+      options:
+        - "🔥 Urgente - Je suis bloqué"
+        - "⚡ Importante - J'aimerais une réponse rapide"
+        - "📈 Normale - Quand vous avez le temps"
+        - "💭 Curiosité - Pas pressé"
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: ℹ️ Informations additionnelles
+      description: Autres détails qui pourraient être utiles
+      placeholder: |
+        - Liens vers des ressources consultées
+        - Screenshots si pertinents
+        - Messages d'erreur complets
+        - Autres détails...
+
+  - type: checkboxes
+    id: help
+    attributes:
+      label: 🤝 Comment nous pouvons vous aider
+      description: Quel type d'aide recherchez-vous ?
+      options:
+        - label: Explication théorique
+        - label: Exemple de code
+        - label: Guide étape par étape
+        - label: Pointeur vers la documentation
+        - label: Aide pour déboguer
+        - label: Conseil sur l'architecture
+        - label: Autre (préciser ci-dessus)
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: ✅ Checklist
+      description: Avant de soumettre
+      options:
+        - label: J'ai lu la documentation disponible
+          required: true
+        - label: J'ai cherché dans les issues existantes
+          required: true
+        - label: Ma question est claire et détaillée
+          required: true

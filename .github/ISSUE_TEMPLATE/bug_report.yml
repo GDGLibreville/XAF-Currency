@@ -1,0 +1,144 @@
+name: 🐛 Rapport de Bug
+description: Signaler un problème avec la librairie XAF Currency
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de prendre le temps de signaler ce bug ! Votre retour nous aide à améliorer XAF Currency.
+        
+        **Avant de continuer, vérifiez :**
+        - [ ] J'ai cherché dans les issues existantes
+        - [ ] J'utilise la dernière version de la librairie
+        - [ ] Le problème est reproductible
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📝 Description du problème
+      description: Décrivez clairement le problème rencontré
+      placeholder: "Décrivez ce qui ne fonctionne pas comme attendu..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 🔄 Étapes pour reproduire
+      description: Comment reproduire le problème ?
+      placeholder: |
+        1. Installer la librairie avec '...'
+        2. Appeler la fonction '...'
+        3. Passer les paramètres '...'
+        4. Voir l'erreur
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: ✅ Comportement attendu
+      description: Que devrait-il se passer normalement ?
+      placeholder: "Je m'attendais à..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: ❌ Comportement actuel
+      description: Que se passe-t-il réellement ?
+      placeholder: "À la place, il se passe..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: code
+    attributes:
+      label: 💻 Code d'exemple
+      description: Partagez un code minimal qui reproduit le problème
+      render: typescript
+      placeholder: |
+        import { XAFCurrency } from 'xaf-currency';
+        
+        // Votre code ici
+        const result = XAFCurrency.format(150000);
+        console.log(result); // Erreur ici
+
+  - type: textarea
+    id: error
+    attributes:
+      label: 🚨 Messages d'erreur
+      description: Copiez-collez les messages d'erreur complets
+      render: shell
+      placeholder: |
+        Error: TypeError: Cannot read property 'format' of undefined
+            at Object.<anonymous> (/path/to/file.js:3:25)
+            ...
+
+  - type: dropdown
+    id: version
+    attributes:
+      label: 📦 Version de XAF Currency
+      description: Quelle version utilisez-vous ?
+      options:
+        - "1.0.0 (latest)"
+        - "0.9.x"
+        - "0.8.x"
+        - "Autre (préciser dans la description)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: 🌍 Environnement
+      description: Où rencontrez-vous le problème ?
+      multiple: true
+      options:
+        - "Node.js"
+        - "Browser (Chrome)"
+        - "Browser (Firefox)"
+        - "Browser (Safari)"
+        - "Browser (Edge)"
+        - "React"
+        - "Vue.js"
+        - "Angular"
+        - "Next.js"
+        - "Nuxt.js"
+        - "Autre"
+
+  - type: input
+    id: node-version
+    attributes:
+      label: 🟢 Version Node.js
+      description: Si applicable (node --version)
+      placeholder: "v18.17.0"
+
+  - type: input
+    id: npm-version
+    attributes:
+      label: 📦 Version npm/yarn
+      description: Si applicable (npm --version)
+      placeholder: "9.6.7"
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: ℹ️ Informations additionnelles
+      description: Autres détails utiles (screenshots, logs, contexte...)
+      placeholder: "Toute information supplémentaire qui pourrait aider..."
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: ✅ Checklist
+      description: Confirmez avant de soumettre
+      options:
+        - label: J'ai lu le [guide de contribution](https://github.com/gdg-libreville/xaf-currency/blob/main/CONTRIBUTING.md)
+          required: true
+        - label: J'ai vérifié que ce n'est pas un doublon d'une issue existante
+          required: true
+        - label: J'ai fourni suffisamment d'informations pour reproduire le problème
+          required: true

@@ -1,0 +1,160 @@
+name: ✨ Demande de fonctionnalité
+description: Proposer une nouvelle fonctionnalité pour XAF Currency
+title: "[FEATURE] "
+labels: ["enhancement", "feature-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de proposer une amélioration à XAF Currency ! 🚀
+        
+        Votre contribution d'idée est précieuse pour l'évolution de la librairie.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 🎯 Problème à résoudre
+      description: Quel problème cette fonctionnalité résoudrait-elle ?
+      placeholder: |
+        En tant qu'utilisateur de XAF Currency, je rencontre le problème suivant...
+        
+        Actuellement, il n'est pas possible de...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 💡 Solution proposée
+      description: Décrivez la solution que vous aimeriez voir
+      placeholder: |
+        Je propose d'ajouter...
+        
+        Cette fonctionnalité permettrait de...
+    validations:
+      required: true
+
+  - type: textarea
+    id: api-proposal
+    attributes:
+      label: 🔧 Proposition d'API
+      description: Comment imaginez-vous l'interface de cette fonctionnalité ?
+      render: typescript
+      placeholder: |
+        // Exemple d'usage proposé
+        import { XAFCurrency } from 'xaf-currency';
+        
+        // Nouvelle méthode ou option
+        XAFCurrency.nouvelleMethode(params);
+        
+        // ou
+        XAFCurrency.format(amount, { 
+          nouvelleOption: true 
+        });
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 📂 Catégorie
+      description: Dans quelle catégorie cette fonctionnalité s'inscrit-elle ?
+      options:
+        - "💱 Conversion de devises"
+        - "🎨 Formatage et affichage"
+        - "🔢 Calculs et arrondis"
+        - "🌍 Internationalisation"
+        - "⚡ Performance"
+        - "🛠️ Outils de développement"
+        - "📱 Support plateforme"
+        - "🔌 Intégrations"
+        - "📊 Analytics et monitoring"
+        - "🔒 Sécurité"
+        - "Autre"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: ⚖️ Priorité
+      description: À votre avis, quelle est l'importance de cette fonctionnalité ?
+      options:
+        - "🔥 Critique - Bloquant pour mon usage"
+        - "⚡ Haute - Très utile"
+        - "📈 Moyenne - Nice to have"
+        - "💭 Basse - Idée pour le futur"
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 Alternatives considérées
+      description: Avez-vous pensé à d'autres façons de résoudre ce problème ?
+      placeholder: |
+        J'ai également considéré...
+        
+        Une autre approche serait de...
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: 🎲 Cas d'usage
+      description: Dans quels scénarios cette fonctionnalité serait-elle utilisée ?
+      placeholder: |
+        - Cas d'usage 1: Quand un développeur souhaite...
+        - Cas d'usage 2: Pour les applications qui...
+        - Cas d'usage 3: Dans le contexte de...
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: 🌟 Exemples concrets
+      description: Donnez des exemples concrets d'utilisation
+      render: typescript
+      placeholder: |
+        // Exemple 1: Application e-commerce
+        const price = XAFCurrency.convertFromEUR(29.99, { 
+          includeExchangeFee: true 
+        });
+        
+        // Exemple 2: Dashboard financier
+        const formatted = XAFCurrency.formatRange(1000, 5000);
+        // Résultat: "1 000 - 5 000 FCFA"
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: 🤝 Contribution
+      description: Comment pourriez-vous aider à implémenter cette fonctionnalité ?
+      options:
+        - label: Je peux aider à implémenter cette fonctionnalité
+        - label: Je peux écrire des tests pour cette fonctionnalité
+        - label: Je peux aider avec la documentation
+        - label: Je peux fournir des retours pendant le développement
+        - label: Je peux seulement suggérer l'idée
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: ℹ️ Informations additionnelles
+      description: Autres détails, références, liens utiles...
+      placeholder: |
+        - Lien vers des librairies similaires
+        - Standards ou spécifications à respecter
+        - Contraintes particulières
+        - Ressources utiles
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: ✅ Checklist
+      description: Confirmez avant de soumettre
+      options:
+        - label: J'ai vérifié que cette fonctionnalité n'existe pas déjà
+          required: true
+        - label: J'ai cherché dans les issues existantes
+          required: true
+        - label: J'ai lu la [roadmap du projet](https://github.com/gdg-libreville/xaf-currency#-roadmap)
+          required: true
+        - label: Ma proposition respecte l'esprit de la librairie XAF Currency
+          required: true

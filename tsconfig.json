@@ -1,0 +1,83 @@
+{
+  "compilerOptions": {
+    // Type Checking
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noUncheckedIndexedAccess": true,
+    "noFallthroughCasesInSwitch": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Modules
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM"],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // Emit
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "removeComments": true,
+    "importHelpers": true,
+
+    // JavaScript Support
+    "allowJs": false,
+    "checkJs": false,
+
+    // Interop Constraints
+    "isolatedModules": true,
+    "allowUmdGlobalAccess": false,
+
+    // Language and Environment
+    "experimentalDecorators": false,
+    "emitDecoratorMetadata": false,
+
+    // Projects
+    "incremental": true,
+    "composite": false,
+
+    // Output Formatting
+    "pretty": true,
+
+    // Completeness
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+
+    // Base URL and Paths
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/types": ["src/types/index"],
+      "@/utils": ["src/utils/index"],
+      "@/core": ["src/core/index"]
+    },
+
+    // Type Roots
+    "typeRoots": ["./node_modules/@types", "./src/types"]
+  },
+  "include": [
+    "src/**/*",
+    "tests/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "coverage",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "rollup.config.js",
+    "jest.config.js"
+  ],
+  "ts-node": {
+    "esm": true
+  }
+}
